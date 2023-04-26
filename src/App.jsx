@@ -5,7 +5,7 @@ import StartPage from './pages/StartPage';
 import EditPage from './pages/EditPage';
 import { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { fillBingoItems } from './app/bingoSquaresSlice';
+import { fillBingoItems } from './app/bingoInfoSquaresSlice';
 
 function App() {
   const [bingoItems, setBingoItems] = useState([]);
