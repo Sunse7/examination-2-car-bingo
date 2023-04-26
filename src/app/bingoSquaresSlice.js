@@ -8,6 +8,9 @@ export const bingoInfoSquaresSlice = createSlice({
     name: 'bingoItems',
     initialState,
     reducers: {
+        fillBingoItems: (state, action) => {
+
+        },
         addBingoItem: (state, action) => {
 
         },
