@@ -23,5 +23,5 @@ export const bingoInfoSquaresSlice = createSlice({
     }
 })
 
-export const { addBingoItem, updateBingoItem, deleteBingoItem } = bingoInfoSquaresSlice.actions;
+export const { addBingoItem, updateBingoItem, deleteBingoItem, fillBingoItems } = bingoInfoSquaresSlice.actions;
 export default bingoInfoSquaresSlice.reducer;
