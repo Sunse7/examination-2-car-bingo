@@ -1,0 +1,24 @@
+import { createSlice } from "@reduxjs/toolkit";
+
+const initialState = {
+    bingoItems: []
+}
+
+export const bingoInfoSquaresSlice = createSlice({
+    name: 'bingoItems',
+    initialState,
+    reducers: {
+        addBingoItem: (state, action) => {
+
+        },
+        updateBingoItem: (state, action) => {
+
+        },
+        deleteBingoItem: (state, action) => {
+
+        }
+    }
+})
+
+export const { addBingoItem, updateBingoItem, deleteBingoItem } = bingoInfoSquaresSlice.actions;
+export default bingoInfoSquaresSlice.reducer;
