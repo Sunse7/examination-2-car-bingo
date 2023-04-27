@@ -28,3 +28,9 @@ $secondaryGreen: #89D770;
     font-size: 14px;
     color: black;
 }
+
+@mixin button-style {
+    color: black;
+    border: none;
+    padding: 0.3rem 0.6rem;
+}

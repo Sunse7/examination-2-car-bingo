@@ -8,8 +8,8 @@ function StartPage() {
     return ( 
         <main>
             <h2>Bil bingo</h2>
-            <Button title='Ny bricka' />
-            <Button title='Redigera' action={() => navigate('/editpage')} />
+            <Button title='Ny bricka' isBlue={true} />
+            <Button title='Redigera' action={() => navigate('/editpage')} isBlue={false} />
             <BingoTray />
         </main>
      );

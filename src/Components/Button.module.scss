@@ -1,0 +1,16 @@
+@import '../variables';
+
+.button {
+    @include button-style;
+    @include secondary-font;
+    @include border-radius;
+    @include shadow;
+}
+
+.blue {
+    background-color: $primaryBlue;
+}
+
+.green {
+    background-color: $secondaryGreen;
+}

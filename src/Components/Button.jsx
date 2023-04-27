@@ -1,6 +1,8 @@
-function Button({title, action}) {
+import style from './Button.module.scss';
+
+function Button({title, action, isBlue}) {
     return ( 
-        <button onClick={action}>{title}</button>
+        <button onClick={action} className={`${style.button} ${isBlue ? style.blue : style.green}` }>{title}</button>
      );
 }
 
