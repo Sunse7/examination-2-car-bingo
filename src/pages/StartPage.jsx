@@ -4,9 +4,9 @@ import BingoTray from '../Components/BingoTray';
 function StartPage() {
     return ( 
         <main>
-            <h2>StartPage</h2>
+            <h2>Bil bingo</h2>
             <Button title='Ny bricka' />
-            <Button title='Editera ' />
+            <Button title='Redigera ' />
             <BingoTray />
         </main>
      );

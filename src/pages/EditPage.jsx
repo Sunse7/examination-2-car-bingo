@@ -1,7 +1,7 @@
 function EditPage() {
     return ( 
         <main>
-            <h2>EditPage</h2>
+            <h2>Redigera</h2>
         </main>
      );
 }
