@@ -1,7 +1,8 @@
 function SplashPage() {
     return ( 
         <main>
-            <h2>Splash</h2>
+            <h1>Bil Bingo Time!</h1>
+            <img src="./images/camper-van.png" alt="" />
         </main>
      );
 }
