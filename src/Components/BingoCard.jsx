@@ -1,7 +1,9 @@
-function BingoCard() {
+import style from './BingoCard.module.scss';
+
+function BingoCard({bingoItem}) {
     return ( 
-        <article>
-            <h2>Bingo Card</h2>
+        <article className={style.card}>
+            <p className={style.card__info}>{bingoItem.text}</p>
         </article>
      );
 }

@@ -1,0 +1,10 @@
+@import '../variables';
+
+.card {
+    background-color: $secondaryBlue;
+    border: 1px solid $primaryBlue;
+    &__info {
+        @include secondary-font;
+        word-break: break-all;
+    }
+}
