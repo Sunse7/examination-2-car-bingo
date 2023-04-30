@@ -3,8 +3,25 @@
 .card {
     background-color: $secondaryBlue;
     border: 1px solid $primaryBlue;
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%; 
+    min-height: 5.4rem;   
     &__info {
         @include secondary-font;
         word-break: break-all;
+        width: 100%;
     }
+}
+
+.checkmark {
+    background-image: url('./images/icon-check.svg');
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 100%;
+    height: 100%;
+    margin: 0; 
 }
