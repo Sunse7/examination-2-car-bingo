@@ -1,0 +1,24 @@
+@import '../variables';
+
+.card {
+    background-color: $secondaryBlue;
+    border: 2px solid $primaryBlue;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__info {
+        @include secondary-font;
+        text-align: left;
+        margin: 8px 6px;
+    }
+    &__iconContainer {
+        margin: 0 6px;
+    }
+    &__iconContainer > :first-child {
+        margin-right: 12px;
+    }
+    &__iconContainer img {
+        width: 20px;
+    }
+}
