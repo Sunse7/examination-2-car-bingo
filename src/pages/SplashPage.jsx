@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import style from './SplashPage.module.scss';
 
 function SplashPage() {
   const navigate = useNavigate();
@@ -12,9 +13,9 @@ function SplashPage() {
   }, []);
 
   return (
-    <main>
-      <h1>Bil Bingo Time!</h1>
-      <img src="./images/camper-van.png" alt="" />
+    <main className={style.main}>
+      <h1 className={style.main__h1}>Bil Bingo Time!</h1>
+      <img className={style.main__image} src="./images/camper-van.png" alt="" />
     </main>
   );
 }
