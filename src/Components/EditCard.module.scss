@@ -7,6 +7,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    &__input {
+        @include input-style;
+    }
+    &__input:focus {
+        border-color: $primaryPink;
+    }
     &__info {
         @include secondary-font;
         text-align: left;

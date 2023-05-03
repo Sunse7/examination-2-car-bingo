@@ -34,3 +34,14 @@ $secondaryGreen: #89D770;
     border: none;
     padding: 0.3rem 0.6rem;
 }
+
+@mixin input-style {
+    background-color: $secondaryBlue;
+    border-style: solid;
+    border-color: $primaryBlue;
+    @include border-radius;
+    @include secondary-font;
+    outline: none;
+    padding: 8px 6px;
+    min-width: 16rem;
+}

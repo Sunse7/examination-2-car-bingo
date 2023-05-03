@@ -16,7 +16,7 @@ function EditPage() {
   const dispatch = useDispatch();
   const [addTextVisible, setAddTextVisible] = useState(false);
   const [editingItemId, setEditingItemId] = useState(null);
-  const [input, setInput] = useState();
+  const [newBingoItemInput, setNewBingoItemInput] = useState();
   const [updateText, setUpdateText] = useState();
 
   function editText(item) {
@@ -37,7 +37,7 @@ function EditPage() {
 
   function addNewBingoItem() {
     let newItem = {
-      text: input,
+      text: newBingoItemInput,
       img: "",
     };
     dispatch(addBingoItem(newItem));
@@ -53,10 +53,11 @@ function EditPage() {
       {addTextVisible ? (
         <>
           <input
+            className={style.main__addNewInput}
             type="text"
-            placeholder="Lägg till text"
+            placeholder="Lägg till text, max 40 tecken"
             maxLength="40"
-            onChange={(e) => setInput(e.target.value)}
+            onChange={(e) => setNewBingoItemInput(e.target.value)}
           />
           <Button title="Spara" action={addNewBingoItem} />
         </>
