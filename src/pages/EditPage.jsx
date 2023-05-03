@@ -11,8 +11,8 @@ import {
 import { useState } from "react";
 
 function EditPage() {
-  const navigate = useNavigate();
   const state = useSelector((state) => state.bingoItems);
+  const navigate = useNavigate();
   const dispatch = useDispatch();
   const [addTextVisible, setAddTextVisible] = useState(false);
   const [editingItemId, setEditingItemId] = useState(null);
