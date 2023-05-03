@@ -3,7 +3,7 @@
 .card {
     background-color: $secondaryBlue;
     border: 2px solid $primaryBlue;
-    border-radius: 4px;
+    @include border-radius;
     display: flex;
     justify-content: space-between;
     align-items: center;
