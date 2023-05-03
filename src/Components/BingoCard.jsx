@@ -9,8 +9,8 @@ function BingoCard({ bingoItem }) {
 
   return (
     <article onClick={ToggleChecked} className={style.card}>
-      <figure className={isChecked ? style.checkmark : null}></figure>
-        <p className={style.card__info}>{bingoItem.text}</p>
+      <figure className={isChecked ? style.card__checkmark : null}></figure>
+      <p className={style.card__info}>{bingoItem.text}</p>
     </article>
   );
 }
