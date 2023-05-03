@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, current } from "@reduxjs/toolkit";
 
 const initialState = {
     bingoItems: []
@@ -12,15 +12,13 @@ export const bingoInfoSquaresSlice = createSlice({
             state.bingoItems.push(...action.payload)
         },
         addBingoItem: (state, action) => {
-            console.log('added');
-            //Add id
+            let id = state.bingoItems.length + 1;
+            let newBingoItem = {...action.payload, id: id};
+            state.bingoItems.unshift(newBingoItem);
         },
-        updateBingoItem: (state, action, newText) => {
-            console.log(action.payload.id);
-            let bingoItemToUpdate = action.payload;
-            bingoItemToUpdate.text = action.payload.newText;
-            let bingoItemIndex = state.bingoItems.findIndex((bingoItem) => bingoItem.id === bingoItemToUpdate.id);
-            state.bingoItems.splice(bingoItemIndex, 1, newText);
+        updateBingoItem: (state, action) => {
+            let bingoItemIndex = state.bingoItems.findIndex((bingoItem) => bingoItem.id === action.payload.id);
+            state.bingoItems.splice(bingoItemIndex, 1, {text: action.payload.text, id: action.payload.id});
         },
         deleteBingoItem: (state, action) => {
             let bingoItemToRemove = action.payload;
