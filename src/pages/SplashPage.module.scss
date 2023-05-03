@@ -7,11 +7,8 @@
     justify-content: center;
     width: 100%;
     height: 840px;
-
     &__h1 {
         @include primary-font;
-        
-        
     }
     &__image {
         width: 85%;

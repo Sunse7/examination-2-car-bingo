@@ -4,7 +4,6 @@ import style from './BingoTray.module.scss';
 
 function BingoTray() {
     const state = useSelector((state) => state.bingoItems);
-
     let bingoItemsCopy = [...state];
 
     for (let i = bingoItemsCopy.length - 1; i > 0; i--) {
