@@ -10,7 +10,7 @@ function StartPage() {
     <main className={style.wrapper}>
       <h2>Bil bingo</h2>
       <section className={style.wrapper__section}>
-        <Button title="Ny bricka" isBlue={true} />
+        <Button title="Ny bricka" isBlue={true} action={() => window.location.reload(false)} />
         <Button
           title="Redigera"
           action={() => navigate("/editpage")}
