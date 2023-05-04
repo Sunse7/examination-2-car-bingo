@@ -12,10 +12,18 @@ function App() {
   const dispatch = useDispatch();
 
   useEffect(() => {
+    let ignore = false;
     fetch('./json-files/bingo-items.json')
     .then(response => response.json())
-    .then(data => setBingoItems(data))
+    .then(data => {
+      if(!ignore) {
+        setBingoItems(data);
+      }
+    })
     .catch(err => console.log(err))
+    return () => {
+      ignore = true;
+    }
   }, [])
 
   useEffect(() => {
