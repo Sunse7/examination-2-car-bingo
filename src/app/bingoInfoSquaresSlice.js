@@ -1,7 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-    bingoItems: []
+    bingoItems: [],
+    counter: 0
 }
 
 export const bingoInfoSquaresSlice = createSlice({
@@ -11,8 +12,11 @@ export const bingoInfoSquaresSlice = createSlice({
         fillBingoItems: (state, action) => {
             state.bingoItems.push(...action.payload)
         },
+        fillCounter: (state, action) => {
+            state.counter = action.payload;
+        },
         addBingoItem: (state, action) => {
-            let id = state.bingoItems.length + 1;
+            let id = state.counter += 1;
             let newBingoItem = {...action.payload, id: id};
             state.bingoItems.unshift(newBingoItem);
         },
@@ -29,5 +33,5 @@ export const bingoInfoSquaresSlice = createSlice({
     }
 })
 
-export const { addBingoItem, updateBingoItem, deleteBingoItem, fillBingoItems } = bingoInfoSquaresSlice.actions;
+export const { addBingoItem, updateBingoItem, deleteBingoItem, fillBingoItems, fillCounter } = bingoInfoSquaresSlice.actions;
 export default bingoInfoSquaresSlice.reducer;
