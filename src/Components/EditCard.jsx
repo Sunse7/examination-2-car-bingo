@@ -5,7 +5,7 @@ function EditCard({ bingoItem, editAction, deleteAction, isVisible, handleChange
     <article className={style.card}>
       { isVisible ?
         <input className={style.card__input} type="text" defaultValue={bingoItem.text} onChange={handleChange} /> :
-        <p className={style.card__info}>{bingoItem.text} {bingoItem.id}</p>
+        <p className={style.card__info}>{bingoItem.text}</p>
       }
       <section className={style.card__iconContainer}>
         <img onClick={editAction} src="./images/icon-pencil.svg" alt="" />
